@@ -1,0 +1,160 @@
+/* General */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Encabezado */
+header {
+    background-color: #37cde0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header .logo-principal {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-principal img {
+    width: 15vh;
+    height: 10vh;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #660f0f;
+}
+
+img{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: nowrap; 
+    max-width: 900px;
+    margin: auto;
+}
+
+.box-1, .box-2 {
+    background-color: #b2e1e8a8;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.box-1 {
+    width: 300px;
+    min-height: 400px;
+}
+
+.box-2 {
+    width: 500px;
+    min-height: 400px;
+}
+
+.box-1 h2, .box-2 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-1 p, .box-2 p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* O cambia a 'flex-start' o 'flex-end' según convenga */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #000; /* Color por defecto para Facebook */
+  font-size: 32px; /* Tamaño de los íconos */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #3b5998; /* Azul Facebook al pasar el ratón */
+}
+
+/* Estilo específico para TikTok */
+.social-icons a:nth-child(1):hover {
+  color: #000; /* Color TikTok al pasar el ratón */
+}
+
+.portafolio:hover{
+    text-decoration: none;
+    color: #2da692;
+    transition: 1s;
+}
+
+@media (max-width: 900px) {
+    .main-grid{
+        grid-template-columns: 1fr;
+        min-width: 500px;
+
+    }
+
+    header {
+        flex-direction: wrap;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    img{
+        width: 270px;
+        height: 250px;
+        text-align: center;
+    }
+    
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+     .box-1, .box-2 {
+        width: 100%;
+        min-width: unset;
+        min-height: 300px;
+    }
+}

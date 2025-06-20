@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow-x: hidden; /* Elimina scroll horizontal */
+}
+
+header {
+    background-color: #37cde0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header .logo-principal {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-principal img {
+    width: 15vh;
+    height: 10vh;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #0c363c;
+    text-align: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grid-box {
+    background-color: #ffffff;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ✅ Responsive para móviles */
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        min-width: unset; /* Elimina min-width que causaba scroll */
+        padding: 20px;
+    }
+
+    .grid-box {
+        width: 100%; /* Se adapta al contenedor */
+        height: auto;
+    }
+
+    .grid-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
