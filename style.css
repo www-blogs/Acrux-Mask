@@ -1,110 +1,124 @@
 /* General */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+font-family: sans-serif;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
 }
 
 /* Encabezado */
 header {
-    background-color: #37cde0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+background-color: #37cde0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 2px;
+flex-wrap: wrap;
+border: solid, 2px;
+box-sizing: border-box;
 }
 
 header .logo-principal {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
+margin: 20px;
 }
 
 header .logo-principal img {
-    width: 15vh;
-    height: 10vh;
-    margin: 0;
+width: 25vh;
+height: 18vh;
+margin: 0;
+box-sizing: border-box;
+border: solid, 2px;
+border-radius: 10px;
+color: #000;
+
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
+list-style: none;
+display: flex;
+gap: 100px;
+margin: 30px;
+padding: 37px;
+flex-wrap: wrap;
+border: solid, 2px #000;
+box-sizing: border-box;
+background-color: #ffffff;
+width: auto;
+height: 15vh;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+text-decoration: none;
+color: #060303;
+font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-decoration: none;
-    color: #660f0f;
+text-decoration: none;
+color: #660f0f;
 }
 
 img{
-    width: 300px;
-    height: 200px;
-    text-align: center;
+width: 300px;
+height: 200px;
+text-align: center;
 
 }
 
 
 .main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 50px;
-    flex-wrap: nowrap; 
-    max-width: 900px;
-    margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 30px;
+padding: 50px;
+flex-wrap: nowrap; 
+max-width: 900px;
+margin: auto;
 }
 
 .box-1, .box-2 {
-    background-color: #b2e1e8a8;
-    border-radius: 8px;
-    padding: 20px;
-    overflow-y: auto;
+background-color: #b2e1e8a8;
+border-radius: 8px;
+padding: 20px;
+overflow-y: auto;
+border: #000, solid;
 }
 
 .box-1 {
-    width: 300px;
-    min-height: 400px;
+width: 300px;
+min-height: 400px;
 }
 
 .box-2 {
-    width: 500px;
-    min-height: 400px;
+width: 500px;
+min-height: 400px;
 }
 
 .box-1 h2, .box-2 h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+font-size: 20px;
+margin-bottom: 10px;
 }
 
 .box-1 p, .box-2 p {
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 15px;
+font-size: 16px;
+line-height: 1.4;
+margin-bottom: 15px;
 }
 
 .social-icons {
-  display: flex;
-  gap: 20px;
-  justify-content: center; /* O cambia a 'flex-start' o 'flex-end' según convenga */
-  margin-top: 20px;
+display: flex;
+gap: 20px;
+justify-content: center; /* O cambia a 'flex-start' o 'flex-end' según convenga */
+margin-top: 20px;
 }
 
 .social-icons a {
-  color: #000; /* Color por defecto para Facebook */
-  font-size: 32px; /* Tamaño de los íconos */
-  transition: color 0.3s;
+color: #000; /* Color por defecto para Facebook */
+font-size: 32px; /* Tamaño de los íconos */
+transition: color 0.3s;
 }
 
 .social-icons a:hover {
@@ -116,45 +130,109 @@ img{
   color: #000; /* Color TikTok al pasar el ratón */
 }
 
+.social-box {
+background-color: #baf7f9;
+border: 2px solid #000;
+border-radius: 8px;
+padding: 20px;  
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 5px;
+margin: 30px;
+width: 900px;   
+}
+
+.social-box a {
+  font-size: 32px;  /* tamaño del icono */
+  transition: transform 0.3s;
+}
+
+.social-box a:nth-child(1) i {
+  color: #000; /* TikTok - negro (o el color oficial de TikTok si prefieres un gradiente lo podemos armar con SVG o CSS avanzado) */
+}
+
+.social-box a:nth-child(2) i {
+  color: #1877f2; /* Facebook azul */
+}
+
+.social-box a:nth-child(3) i {
+  color: #ff0000; /* YouTube rojo */
+}
+
+/* Efecto hover opcional: agrandar */
+.social-box a:hover {
+  transform: scale(1.2);
+}
+
 .portafolio:hover{
     text-decoration: none;
     color: #2da692;
     transition: 1s;
 }
 
-@media (max-width: 900px) {
-    .main-grid{
-        grid-template-columns: 1fr;
-        min-width: 500px;
+@media (max-width: 720px) {
+  header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
 
-    }
+  header .logo-principal img {
+    width: 50px;
+    height: fit-content;
+  }
 
-    header {
-        flex-direction: wrap;
-        align-items: flex-start;
-    }
+  nav ul{
+    width: 242px;
+    height: 50px;
+    margin: 10px;
+    gap: 15PX;
+    text-align: center;
+    display: flex;
+    padding: 20PX;
+  font-size: 9px;
+  flex-direction: column;
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    img{
-        width: 270px;
-        height: 250px;
-        text-align: center;
-    }
-    
 
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  }
+  
+  .social-box {
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 20px;
+    margin: 17px ;
+  }
 
-     .box-1, .box-2 {
-        width: 100%;
-        min-width: unset;
-        min-height: 300px;
-    }
+  .social-box h2 {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .box-1, .box-2 {
+    width: 90%;
+    padding: 15px;
+    border: solid #000;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 28px;
+  }
 }

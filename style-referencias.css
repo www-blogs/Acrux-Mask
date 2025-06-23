@@ -5,49 +5,63 @@ body {
     background: #fff;
     overflow-x: hidden; /* Elimina scroll horizontal */
 }
-
+/* Encabezado */
 header {
-    background-color: #37cde0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+background-color: #37cde0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 2px;
+flex-wrap: wrap;
+border: solid, 2px;
+box-sizing: border-box;
 }
 
 header .logo-principal {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
+margin: 20px;
 }
 
 header .logo-principal img {
-    width: 15vh;
-    height: 10vh;
-    margin: 0;
+width: 25vh;
+height: 18vh;
+margin: 0;
+box-sizing: border-box;
+border: solid, 2px;
+border-radius: 10px;
+color: #000;
+
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
+list-style: none;
+display: flex;
+gap: 100px;
+margin: 30px;
+padding: 37px;
+flex-wrap: wrap;
+border: solid, 2px #000;
+box-sizing: border-box;
+background-color: #ffffff;
+width: auto;
+height: 15vh;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #060303;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #000000;
+    text-decoration: none;
+    color: #660f0f;
 }
 
 h2 {
-    text-decoration: underline;
-    color: #0c363c;
+    text-decoration: none;
+    color: #000000;
     text-align: center;
 }
 
@@ -71,6 +85,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    border: #000, solid;
 }
 
 .grid-box img {
@@ -80,17 +95,94 @@ h2 {
     border-radius: 10px;
 }
 
-/* ✅ Responsive para móviles */
-@media (max-width: 900px) {
+
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* O cambia a 'flex-start' o 'flex-end' según convenga */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #000; /* Color por defecto para Facebook */
+  font-size: 32px; /* Tamaño de los íconos */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #3b5998; /* Azul Facebook al pasar el ratón */
+}
+
+/* Estilo específico para TikTok */
+.social-icons a:nth-child(1):hover {
+  color: #000; /* Color TikTok al pasar el ratón */
+}
+
+.social-box {
+  background-color: #baf7f9;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 20px;  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 30px;
+  width: 900px;   
+}
+
+.social-box a {
+  font-size: 32px;  /* tamaño del icono */
+  transition: transform 0.3s;
+}
+
+.social-box a:nth-child(1) i {
+  color: #000; /* TikTok - negro (o el color oficial de TikTok si prefieres un gradiente lo podemos armar con SVG o CSS avanzado) */
+}
+
+.social-box a:nth-child(2) i {
+  color: #1877f2; /* Facebook azul */
+}
+
+.social-box a:nth-child(3) i {
+  color: #ff0000; /* YouTube rojo */
+}
+
+/* Efecto hover opcional: agrandar */
+.social-box a:hover {
+  transform: scale(1.2);
+}
+/* Responsive */
+@media (max-width: 900px) { 
+  header .logo-principal img {
+    width: 50px;
+    height: fit-content;
+  }
+
+ nav ul{
+    width: 242px;
+    height: 50px;
+    margin: 10px;
+    gap: 15PX;
+    text-align: center;
+    display: flex;
+    padding: 20PX;
+  font-size: 9px;
+  flex-direction: column;
+ }
+
     .main-grid {
         grid-template-columns: 1fr;
-        min-width: unset; /* Elimina min-width que causaba scroll */
+        min-width: unset; 
         padding: 20px;
+    
     }
 
     .grid-box {
         width: 100%; /* Se adapta al contenedor */
         height: auto;
+        border: #000, solid;
     }
 
     .grid-box img {
@@ -98,13 +190,19 @@ h2 {
         height: auto;
     }
 
-    header {
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
+    .social-box {
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 20px;
+    margin: 17px ;
+  }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .social-box h2 {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
 }
+ 
